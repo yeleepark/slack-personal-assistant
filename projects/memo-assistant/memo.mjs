@@ -16,7 +16,7 @@ const { SLACK_BOT_TOKEN, SLACK_APP_TOKEN, SLACK_ALLOWED_USER, SLACK_MEMO_CHANNEL
 for (const [k, v] of Object.entries({ SLACK_BOT_TOKEN, SLACK_APP_TOKEN, SLACK_ALLOWED_USER, SLACK_MEMO_CHANNEL })) {
   if (!v) { console.error(`.env에 ${k}가 없습니다`); process.exit(1); }
 }
-const MODEL = env.CLAUDE_MODEL || 'sonnet';
+const MODEL = env.CLAUDE_MODEL || 'haiku';
 const REMIND_MS = Number(env.REMIND_MINUTES || 120) * 60 * 1000;
 const FROM = Number(env.REMIND_FROM || 9);
 const TO = Number(env.REMIND_TO || 22);
@@ -129,7 +129,7 @@ app.message(async ({ message }) => {
     const sent = await say(message.channel, message.ts, lines.join('\n') || '처리할 내용이 없습니다.');
     added.forEach((t) => (t.botTs = sent.ts));
     if (added.length) save(todos);
-    await react(message.channel, message.ts, added.length || (data.events || []).length ? 'white_check_mark' : 'memo');
+    await react(message.channel, message.ts, added.length ? 'memo' : (data.events || []).length ? 'calendar' : 'speech_balloon'); // ✅ 는 사용자가 완료 표시용으로 남겨 둔다
   });
 });
 
