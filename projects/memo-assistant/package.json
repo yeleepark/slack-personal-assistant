@@ -1,0 +1,9 @@
+{
+  "name": "memo-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "슬랙 메모 채널에 적은 일정은 구글 캘린더에 넣고, 할 일은 저장해서 완료할 때까지 알림을 주는 비서",
+  "scripts": { "start": "node --env-file=.env memo.mjs" },
+  "dependencies": { "@slack/bolt": "^4.0.0" }
+}
