@@ -1,0 +1,9 @@
+{
+  "name": "slack-claude-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "슬랙 채널/DM에 올린 글·사진·폴더 경로를 맥에서 돌아가는 Claude Code 작업으로 넘기고 진행 상황을 스레드로 알려 주는 브리지",
+  "scripts": { "start": "node --env-file=.env bridge.mjs" },
+  "dependencies": { "@slack/bolt": "^4.0.0" }
+}

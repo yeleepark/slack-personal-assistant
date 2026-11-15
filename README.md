@@ -17,6 +17,10 @@ Slack에서 쓰는 개인 비서입니다. 매번 직접 들어가서 확인하�
 ```
 > 위 숫자는 예시입니다.
 
+**Slack → Claude Code 브리지** (`projects/slack-claude-bridge`)
+
+슬랙에 사진·메모·폴더 경로를 올리면 맥에서 돌아가는 Claude Code가 작업하고, 진행 상황과 결과를 스레드로 알려 줍니다. 같은 스레드에 답장하면 이어서 진행합니다. ([자세히](projects/slack-claude-bridge))
+
 ## 사용법
 
 | 방법 | 어떻게 |

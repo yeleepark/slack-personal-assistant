@@ -1,0 +1,5 @@
+[
+  { "tool": "Bash", "match": "pnpm build", "label": "빌드 중" },
+  { "tool": "Bash", "match": "pnpm test|vitest|jest", "label": "테스트 실행 중" },
+  { "tool": "Write", "match": "^/.*/docs/", "label": "문서 작성 중" }
+]
