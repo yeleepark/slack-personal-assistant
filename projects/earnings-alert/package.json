@@ -1,0 +1,12 @@
+{
+  "name": "earnings-alert",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env src/index.mjs",
+    "test-slack": "node --env-file=.env src/index.mjs --test"
+  },
+  "dependencies": {
+    "playwright-core": "^1.65.1"
+  }
+}

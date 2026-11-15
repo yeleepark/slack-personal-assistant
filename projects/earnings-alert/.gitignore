@@ -1,0 +1,9 @@
+# 비밀값 / 개인 데이터 — 절대 커밋하지 않는다
+.env
+.env.*
+!.env.example
+*.log
+history.json
+.chrome-profile/
+node_modules/
+.DS_Store
